@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const { json } = require('sequelize/types');
+// const { json } = require('sequelize/types');
 const { Product, Category, Tag, ProductTag } = require('../../models');
-const { findByPk, findOne } = require('../../models/Product');
+// const { findByPk, findOne } = require('../../models/Product');
 
 // The `/api/products` endpoint
 
@@ -34,7 +34,7 @@ router.get('/:id', async (req, res) => {
     ]})
     res.status(200).json(productById)
   } catch (err){
-    res.statusf(500).json(err)
+    res.status(500).json(err)
   }
 });
 
